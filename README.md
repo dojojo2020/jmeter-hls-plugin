@@ -20,7 +20,7 @@
 ***For a Docker image containing only Apache JMeter, see *** https://hub.docker.com/r/justb4/jmeter/)***
 
 ## Execute the test plan
-* The following steps are for Podman network
+* The following steps are for using Podman network if you want to bind the container to the preferred network interface like enp1 or eth1.
   * run "sudo podman network create -d macvlan -o parent=\[Preferred Network Interface] vodnetwork"
   * run "sudo /usr/libexec/cni/dhcp daemon" on the other console or terminal
   * Edit vod-run.sh for 
