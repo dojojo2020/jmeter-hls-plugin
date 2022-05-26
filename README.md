@@ -21,10 +21,10 @@
 
 ## Execute the test plan
 * The following steps are for Podman network
-  * run "sudo podman network create -d macvlan -o parent=enP1p1s0np0 vodnetwork"
+  * run "sudo podman network create -d macvlan -o parent=\[Preferred Network Interface] vodnetwork"
   * run "sudo /usr/libexec/cni/dhcp daemon" on the other console or terminal
   * Edit vod-run.sh for 
-    "sudo podman run -dt --name webserver --network vodnetwork mrdojojo/jmeter-hls-plugin" 
+    "sudo podman run --rm --name ${NAME} --network **vodnetwork** -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@" 
   * run ./vod-test.sh
 
 ## Credits
