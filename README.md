@@ -9,7 +9,6 @@
 
 * **JMeter Plugins** : an independent set of plugins - https://jmeter-plugins.org
 
-https://github.com/egaillardon/jmeter-plugins
 
 * The **version number** is composed of two version numbers
   * the first is the version of the Apache JMeter embedded in this container image
@@ -19,6 +18,14 @@ https://github.com/egaillardon/jmeter-plugins
 
 
 ***For a Docker image containing only Apache JMeter, see *** https://hub.docker.com/r/justb4/jmeter/)***
+
+## Execute the test plan
+* The following steps are for Podman network
+  * run "sudo podman network create -d macvlan -o parent=enP1p1s0np0 vodnetwork"
+  * run "sudo /usr/libexec/cni/dhcp daemon" on the other console or terminal
+  * Edit vod-run.sh for 
+    "sudo podman run -dt --name webserver --network vodnetwork mrdojojo/jmeter-hls-plugin" 
+  * run ./vod-test.sh
 
 ## Credits
 
