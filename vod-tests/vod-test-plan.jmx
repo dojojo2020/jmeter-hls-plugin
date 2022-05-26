@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="VOD Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group-10usersx10secx10loops" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">10</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <com.blazemeter.jmeter.hls.logic.HlsSampler guiclass="com.blazemeter.jmeter.hls.gui.HlsSamplerGui" testclass="com.blazemeter.jmeter.hls.logic.HlsSampler" testname="bzm - HLS Streaming Sampler-max" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/hls/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8</stringProp>
+          <boolProp name="HLS.DURATION">false</boolProp>
+          <stringProp name="HLS.SECONDS_DATA"></stringProp>
+          <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
+          <stringProp name="HLS.SUBTITLE_LANGUAGE"></stringProp>
+          <stringProp name="HLS.BANDWIDTH_TYPE">minBandwidth</stringProp>
+          <stringProp name="HLS.NET_DATA"></stringProp>
+          <stringProp name="HLS.RESOLUTION_TYPE">maxResolution</stringProp>
+          <stringProp name="HLS.RES_DATA"></stringProp>
+          <boolProp name="HLS.RESUME_DOWNLOAD">false</boolProp>
+          <stringProp name="VIDEO_STREAMING.PROTOCOL">HLS</stringProp>
+        </com.blazemeter.jmeter.hls.logic.HlsSampler>
+        <hashTree/>
+        <com.blazemeter.jmeter.hls.logic.HlsSampler guiclass="com.blazemeter.jmeter.hls.gui.HlsSamplerGui" testclass="com.blazemeter.jmeter.hls.logic.HlsSampler" testname="bzm - HLS Streaming Sampler-min" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/hls/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8</stringProp>
+          <boolProp name="HLS.DURATION">false</boolProp>
+          <stringProp name="HLS.SECONDS_DATA"></stringProp>
+          <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
+          <stringProp name="HLS.SUBTITLE_LANGUAGE"></stringProp>
+          <stringProp name="HLS.BANDWIDTH_TYPE">minBandwidth</stringProp>
+          <stringProp name="HLS.NET_DATA"></stringProp>
+          <stringProp name="HLS.RESOLUTION_TYPE">minResolution</stringProp>
+          <stringProp name="HLS.RES_DATA"></stringProp>
+          <boolProp name="HLS.RESUME_DOWNLOAD">false</boolProp>
+          <stringProp name="VIDEO_STREAMING.PROTOCOL">HLS</stringProp>
+        </com.blazemeter.jmeter.hls.logic.HlsSampler>
+        <hashTree/>
+        <com.blazemeter.jmeter.hls.logic.HlsSampler guiclass="com.blazemeter.jmeter.hls.gui.HlsSamplerGui" testclass="com.blazemeter.jmeter.hls.logic.HlsSampler" testname="bzm - DASH Streaming Sampler-max" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/dash/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/manifest.mpd</stringProp>
+          <boolProp name="HLS.DURATION">false</boolProp>
+          <stringProp name="HLS.SECONDS_DATA"></stringProp>
+          <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
+          <stringProp name="HLS.SUBTITLE_LANGUAGE"></stringProp>
+          <stringProp name="HLS.BANDWIDTH_TYPE">minBandwidth</stringProp>
+          <stringProp name="HLS.NET_DATA"></stringProp>
+          <stringProp name="HLS.RESOLUTION_TYPE">maxResolution</stringProp>
+          <stringProp name="HLS.RES_DATA"></stringProp>
+          <boolProp name="HLS.RESUME_DOWNLOAD">false</boolProp>
+          <stringProp name="VIDEO_STREAMING.PROTOCOL">MPEG_DASH</stringProp>
+        </com.blazemeter.jmeter.hls.logic.HlsSampler>
+        <hashTree/>
+        <com.blazemeter.jmeter.hls.logic.HlsSampler guiclass="com.blazemeter.jmeter.hls.gui.HlsSamplerGui" testclass="com.blazemeter.jmeter.hls.logic.HlsSampler" testname="bzm - DASH Streaming Sampler-min" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/dash/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/manifest.mpd</stringProp>
+          <boolProp name="HLS.DURATION">false</boolProp>
+          <stringProp name="HLS.SECONDS_DATA"></stringProp>
+          <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
+          <stringProp name="HLS.SUBTITLE_LANGUAGE"></stringProp>
+          <stringProp name="HLS.BANDWIDTH_TYPE">minBandwidth</stringProp>
+          <stringProp name="HLS.NET_DATA"></stringProp>
+          <stringProp name="HLS.RESOLUTION_TYPE">minResolution</stringProp>
+          <stringProp name="HLS.RES_DATA"></stringProp>
+          <boolProp name="HLS.RESUME_DOWNLOAD">false</boolProp>
+          <stringProp name="VIDEO_STREAMING.PROTOCOL">MPEG_DASH</stringProp>
+        </com.blazemeter.jmeter.hls.logic.HlsSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
