@@ -18,7 +18,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">10</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1000</stringProp>
         <stringProp name="ThreadGroup.ramp_time">10</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -32,7 +32,7 @@
           </elementProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/hls/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8</stringProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k8s.example/hls/DEMO_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8</stringProp>
           <boolProp name="HLS.DURATION">false</boolProp>
           <stringProp name="HLS.SECONDS_DATA"></stringProp>
           <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
@@ -51,7 +51,7 @@
           </elementProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/hls/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8</stringProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k8s.example/hls/DEMO_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/master.m3u8</stringProp>
           <boolProp name="HLS.DURATION">false</boolProp>
           <stringProp name="HLS.SECONDS_DATA"></stringProp>
           <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
@@ -70,7 +70,7 @@
           </elementProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/dash/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/manifest.mpd</stringProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k8s.example/dash/DEMO_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/manifest.mpd</stringProp>
           <boolProp name="HLS.DURATION">false</boolProp>
           <stringProp name="HLS.SECONDS_DATA"></stringProp>
           <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
@@ -89,7 +89,7 @@
           </elementProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <stringProp name="HLS.URL_DATA">http://vod.k3s.hhii.amp/dash/Ampere_AI_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/manifest.mpd</stringProp>
+          <stringProp name="HLS.URL_DATA">http://vod.k8s.example/dash/DEMO_,240p.mp4,360p.mp4,480p.mp4,720p.mp4,1080p.mp4,.en_US.vtt,.urlset/manifest.mpd</stringProp>
           <boolProp name="HLS.DURATION">false</boolProp>
           <stringProp name="HLS.SECONDS_DATA"></stringProp>
           <stringProp name="HLS.AUDIO_LANGUAGE"></stringProp>
