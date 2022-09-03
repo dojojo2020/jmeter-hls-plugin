@@ -35,7 +35,7 @@ RUN apk update \
     && mkdir -p /opt  \
     && tar -xzf /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz -C /opt  \
     && ls -al ${JMETER_HOME}
-    #&& rm -rf /tmp/dependencies
+
 
 
 # Set global PATH such that "jmeter" command is found
