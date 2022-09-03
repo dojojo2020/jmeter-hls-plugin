@@ -1,7 +1,7 @@
 # JMerter HLS Server container
 ## Use the container in JMeter Distribution mode
 
-Reference: https://svn.apache.org/repos/asf/jmeter/tags/v4_0_RC6/docs/usermanual/remote-test.html
+Reference: https://svn.apache.org/repos/asf/jmeter/tags/v4_0_RC6/docs/usermanual/jmeter_distributed_testing_step_by_step.html
 
 
 
