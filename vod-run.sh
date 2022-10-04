@@ -10,4 +10,5 @@ IMAGE="mrdojojo/jmeter-hls-plugin:${JMETER_VERSION}"
 echo ${JMETER_VERSION}
 echo ${PWD}
 echo ${IMAGE}
-podman run --rm --name ${NAME} -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@
+$podman run --rm --name ${NAME} -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@
+sudo podman run --rm --cpuset-cpus 1-30 --pids-limit=-1 --name ${NAME} -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@
